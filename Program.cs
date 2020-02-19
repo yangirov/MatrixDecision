@@ -68,9 +68,7 @@ namespace MatrixDecision
                 // Выводим объект для сравнения
                 foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(p))
                 {
-                    string name = descriptor.Name;
-                    object value = descriptor.GetValue(p);
-                    Console.WriteLine("{0}={1}", name, value);
+                    Console.WriteLine($"{descriptor.Name}={descriptor.GetValue(p)}");
                 }
 
                 // Сравниваем пропы
